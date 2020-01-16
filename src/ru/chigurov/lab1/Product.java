@@ -12,7 +12,7 @@ public abstract class Product implements ICrudAction{
     String firm; //фирма поставщик
     String country; //страна производитель
 
-    @Override
+     @Override
     public void update() {
         Scanner scanner = new Scanner(System.in);
         id = UUID.randomUUID();
@@ -30,6 +30,10 @@ public abstract class Product implements ICrudAction{
 
     @Override
     public void delete() {
+        name = "";
+        price = 0;
+        firm = "";
+        country = "";
         productCounter--;
     }
 }
