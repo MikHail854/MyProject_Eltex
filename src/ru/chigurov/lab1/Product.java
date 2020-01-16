@@ -3,7 +3,7 @@ package ru.chigurov.lab1;
 import java.util.Scanner;
 import java.util.UUID;
 
-public abstract class Product implements ICrudAction{
+public abstract class Product implements ICrudAction {
 
     public UUID id; //ID товара
     public String name; //название
@@ -12,7 +12,7 @@ public abstract class Product implements ICrudAction{
     String firm; //фирма поставщик
     String country; //страна производитель
 
-     @Override
+    @Override
     public void update() {
         Scanner scanner = new Scanner(System.in);
         id = UUID.randomUUID();

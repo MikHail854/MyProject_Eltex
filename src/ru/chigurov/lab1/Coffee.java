@@ -2,21 +2,21 @@ package ru.chigurov.lab1;
 
 import java.util.UUID;
 
-public class Tea extends Product implements BaseClassFields {
-    String typeOfPackaging;
+public class Coffee extends Product implements BaseClassFields {
+    String kindOfCoffeeBeans;
 
-    public Tea() {
+    public Coffee() {
         id = UUID.randomUUID();
     }
 
     @Override
     public void create() {
-        name = name_tea[(int) (Math.random() * 3)];
+        name = name_coffee[(int) (Math.random() * 4)];
         price = (int) (Math.random() * 1000);
         productCounter++;
-        firm = firm_tea[(int) (Math.random() * 3)];
-        country = country_tea[(int) (Math.random() * 5)];
-        typeOfPackaging = typeOfPackaging_tea[(int) (Math.random() * 2)];
+        firm = firm_coffee[(int) (Math.random() * 3)];
+        country = country_coffee[(int) (Math.random() * 5)];
+        kindOfCoffeeBeans = kindOfCoffeeBeans_coffee[(int) (Math.random() * 2)];
     }
 
     @Override
@@ -27,6 +27,6 @@ public class Tea extends Product implements BaseClassFields {
                 "Кол-во товара - " + productCounter + "\n" +
                 "Фирма поставщик - " + firm + "\n" +
                 "Страна производитель - " + country + "\n" +
-                "Вид упаковки - " + typeOfPackaging + "\n");
+                "Вид упаковки - " + kindOfCoffeeBeans + "\n");
     }
 }
