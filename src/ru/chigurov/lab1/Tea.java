@@ -11,12 +11,12 @@ public class Tea extends Product implements BaseClassFields {
 
     @Override
     public void create() {
-        name = name_tea[(int) (Math.random() * 3)];
+        name = random_name_tea[(int) (Math.random() * 3)];
         price = (int) (Math.random() * 1000);
         productCounter++;
-        firm = firm_tea[(int) (Math.random() * 3)];
-        country = country_tea[(int) (Math.random() * 5)];
-        typeOfPackaging = typeOfPackaging_tea[(int) (Math.random() * 2)];
+        firm = random_firm_tea[(int) (Math.random() * 3)];
+        country = random_country_tea[(int) (Math.random() * 5)];
+        typeOfPackaging = random_typeOfPackaging_tea[(int) (Math.random() * 2)];
     }
 
     @Override
