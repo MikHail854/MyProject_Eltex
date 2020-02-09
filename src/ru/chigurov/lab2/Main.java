@@ -14,8 +14,9 @@ public class Main {
                 "4. Принудительное зануление данных\n" +
                 "5. Выход\n");
     }
+
     public static void main(String[] args) {
-        Main selection = new Main();
+       /* Main selection = new Main();
         if (args[0].equalsIgnoreCase("tea")) {
             Tea tea = new Tea();
             selection.menu();
@@ -59,10 +60,38 @@ public class Main {
                 selection.menu();
                 menuSelection = scanner.nextInt();
             }
-        }
-        /*Tea tea = new Tea();
-        Credentials user = new Credentials();
+        }*/
+        Main selection = new Main();
+
+        Tea tea = new Tea();
         ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.addPRODUCT(tea);*/
+        selection.menu();
+        Scanner scanner = new Scanner(System.in);
+        int menuSelection = scanner.nextInt();
+        while (menuSelection != 5) {
+            if (menuSelection == 1) {
+                tea.create();
+                //shoppingCart.add(tea);
+                System.out.println(shoppingCart.order);
+                System.out.println(tea.order);
+
+
+            }
+            if (menuSelection == 2) {
+                tea.read();
+            }
+            if (menuSelection == 3) {
+                tea.update();
+            }
+            if (menuSelection == 4) {
+                tea.delete();
+                //shoppingCart.delete(tea);
+            }
+            selection.menu();
+            menuSelection = scanner.nextInt();
+        }
+
+        //Credentials user = new Credentials();
+
     }
 }

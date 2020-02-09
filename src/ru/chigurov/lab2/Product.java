@@ -3,7 +3,7 @@ package ru.chigurov.lab2;
 import java.util.Scanner;
 import java.util.UUID;
 
-public abstract class Product implements ICrudAction {
+public abstract class Product extends ShoppingCart implements ICrudAction {
 
     public UUID id; //ID товара
     public String name; //название
@@ -17,23 +17,26 @@ public abstract class Product implements ICrudAction {
         Scanner scanner = new Scanner(System.in);
         id = UUID.randomUUID();
         System.out.println("Введите название: ");
-        name = scanner.nextLine();
+        order.add(name = scanner.nextLine());
         System.out.println("Введите цену: ");
-        price = scanner.nextInt();
+        order.add(price = scanner.nextInt());
         System.out.println("Введите фирму поставщика: ");
-        firm = scanner.nextLine();
+        order.add(firm = scanner.nextLine());
         System.out.println("Введите страну производителя: ");
-        country = scanner.nextLine();
-        productCounter++;
+        order.add(country = scanner.nextLine());
+        order.add(++productCounter);
 
     }
 
     @Override
     public void delete() {
-        name = "";
-        price = 0;
-        firm = "";
-        country = "";
-        productCounter--;
+        if (order.size() == 0) {
+            System.out.println("Корзина пуста\n");
+        } else {
+            for (int i = 0; i < 7; i++) {
+                order.remove(0);
+            }
+            productCounter--;
+        }
     }
 }

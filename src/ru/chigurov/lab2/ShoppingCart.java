@@ -4,15 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCart {
-    List<Product> order = new ArrayList<>();
+    public List<Object> order = new ArrayList<>();
 
-    public ShoppingCart() {
+    /*public ShoppingCart() {
+
+    }*/
+
+    /*public void add(Product product){
+        order.add(product.id);
+        order.add(product.name);
+        order.add(product.price);
+        order.add(product.country);
+        order.add(product.firm);
+        order.add(product.productCounter);
 
     }
 
-    public void addPRODUCT(Product product){
-        order.add(product);
-    }
+    public void delete(Product product){
+        order.remove(product);
+    }*/
 
 
 
