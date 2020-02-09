@@ -10,6 +10,12 @@ public class Credentials {
     String patronymic;
     String email;
 
-
+    public Credentials(){
+        idUser = UUID.randomUUID();
+        firstName = "Mikhail";
+        lastName = "Chigurov";
+        patronymic = "Evgen'evich";
+        email = "vip.moneta95@mail.ru";
+    }
 
 }

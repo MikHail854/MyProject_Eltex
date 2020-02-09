@@ -1,5 +1,7 @@
 package ru.chigurov.lab2;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -16,15 +18,30 @@ public class Main {
     }
 
     public static void main(String[] args) {
-       /* Main selection = new Main();
-        if (args[0].equalsIgnoreCase("tea")) {
+
+        /**
+         * тестовое создание и отображение даты и верени
+         */
+        //Date timeCreate = new Date();
+        SimpleDateFormat time = new SimpleDateFormat("HH-mm-ss-SSS, dd - MM - yyy");
+        //System.out.println(timeCreate.toString());
+
+
+        Main selection = new Main();
+        System.out.println("Выберете что заказать: \n1. Чай\n2. Кофе");
+        Scanner scanner = new Scanner(System.in);
+        int teaORcoffee = scanner.nextInt();
+        if (teaORcoffee == 1) {
             Tea tea = new Tea();
             selection.menu();
-            Scanner scanner = new Scanner(System.in);
             int menuSelection = scanner.nextInt();
             while (menuSelection != 5) {
                 if (menuSelection == 1) {
                     tea.create();
+                    /**
+                     * проверка заполнения коллекции
+                     */
+                    System.out.println(tea.shoppingCart);
                 }
                 if (menuSelection == 2) {
                     tea.read();
@@ -38,15 +55,17 @@ public class Main {
                 selection.menu();
                 menuSelection = scanner.nextInt();
             }
-        }
-        if (args[0].equalsIgnoreCase("coffee")) {
+        } else if (teaORcoffee == 2) {
             Coffee coffee = new Coffee();
             selection.menu();
-            Scanner scanner = new Scanner(System.in);
             int menuSelection = scanner.nextInt();
             while (menuSelection != 5) {
                 if (menuSelection == 1) {
                     coffee.create();
+                    /**
+                     * проверка заполнения коллекции
+                     */
+                    System.out.println(coffee.shoppingCart);
                 }
                 if (menuSelection == 2) {
                     coffee.read();
@@ -60,35 +79,6 @@ public class Main {
                 selection.menu();
                 menuSelection = scanner.nextInt();
             }
-        }*/
-        Main selection = new Main();
-
-        Tea tea = new Tea();
-        ShoppingCart shoppingCart = new ShoppingCart();
-        selection.menu();
-        Scanner scanner = new Scanner(System.in);
-        int menuSelection = scanner.nextInt();
-        while (menuSelection != 5) {
-            if (menuSelection == 1) {
-                tea.create();
-                //shoppingCart.add(tea);
-                System.out.println(shoppingCart.order);
-                System.out.println(tea.order);
-
-
-            }
-            if (menuSelection == 2) {
-                tea.read();
-            }
-            if (menuSelection == 3) {
-                tea.update();
-            }
-            if (menuSelection == 4) {
-                tea.delete();
-                //shoppingCart.delete(tea);
-            }
-            selection.menu();
-            menuSelection = scanner.nextInt();
         }
 
         //Credentials user = new Credentials();
