@@ -4,18 +4,18 @@ import java.util.UUID;
 
 public class Credentials {
 
-    UUID idUser;
-    String firstName;
-    String lastName;
-    String patronymic;
-    String email;
+    UUID idUser = UUID.randomUUID();
+    String firstName  = "Mikhail";
+    String lastName  = "Chigurov";
+    String patronymic  = "Evgen'evich";
+    String email = "vip.moneta95@mail.ru";
 
     public Credentials(){
-        idUser = UUID.randomUUID();
+       /* idUser = UUID.randomUUID();
         firstName = "Mikhail";
         lastName = "Chigurov";
         patronymic = "Evgen'evich";
-        email = "vip.moneta95@mail.ru";
+        email = "vip.moneta95@mail.ru";*/
     }
 
 }
