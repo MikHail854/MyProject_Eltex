@@ -5,12 +5,13 @@ import java.util.Date;
 
 public class Order {
     String[] orderStatus = {"в ожидании", "обработан"};
-    String timeCreate = new SimpleDateFormat("HH:mm:ss; dd-MM-yyyy").format(new Date());
+    Date timeCreate;
     //String timeWaiting = new SimpleDateFormat("HH:mm:ss; dd-MM-yyyy").format(new Date());;
-    String timeWaiting;
+    long timeWaiting;
     //long timeWaiting = 2000;
 
     public Order(){
-        String date = new SimpleDateFormat("HH:mm:ss, dd-MM-yyyy").format(new Date());
+        //String date = new SimpleDateFormat("HH:mm:ss, dd-MM-yyyy").format(new Date());
+        this.timeCreate = new Date(System.currentTimeMillis());
     }
 }

@@ -26,11 +26,11 @@ public class Main {
         /**
          * тестовое создание и отображение даты и верени
          */
-        Date timeCreate = new Date();
-        SimpleDateFormat time = new SimpleDateFormat("HH-mm-ss-SSS, dd - MM - yyy");
+        Date timeCreate = new Date(System.currentTimeMillis());;
+        //SimpleDateFormat time = new SimpleDateFormat("HH-mm-ss-SSS, dd - MM - yyy");
         // System.out.println(timeCreate);
-        String date = new SimpleDateFormat("HH:mm:ss, dd-MM-yyyy").format(new Date());
-        System.out.println(date);
+        //String date = new SimpleDateFormat("HH:mm:ss, dd-MM-yyyy").format(new Date());
+        System.out.println(timeCreate);
 
 
         Main selection = new Main();
